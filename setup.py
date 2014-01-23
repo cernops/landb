@@ -1,6 +1,11 @@
 import os
 from setuptools import setup
 
+try:
+	from landb import __version__ as landb_version
+except ImportError:
+	pass
+
 def read(fname):
     """Open a filename and return the contents as a string.
 
@@ -14,7 +19,7 @@ def read(fname):
 
 setup(
     name='LANDB',
-    version='0.1',
+    version=landb_version,
     url='https://github.com/cernops/landb',
     license='GPLv3',
     author='Joe Harrison',
@@ -26,9 +31,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     platforms='any',
-    install_requires=[
-        'suds>=0.4'
-    ],
     classifiers=[
         'Development Status :: 1 - Planning',
         'Environment :: Console',
