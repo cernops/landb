@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = landb
+omit = landb/tests/*
+
+[report]
+ignore-errors = True
