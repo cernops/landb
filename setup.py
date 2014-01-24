@@ -2,9 +2,10 @@ import os
 from setuptools import setup
 
 try:
-	from landb import __version__ as landb_version
+    from landb import __version__ as landb_version
 except ImportError:
-	pass
+    landb_version = "UNKOWN"
+
 
 def read(fname):
     """Open a filename and return the contents as a string.
